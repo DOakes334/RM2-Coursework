@@ -1,0 +1,11 @@
+
+#!/bin/bash --login
+#SBATCH -J RM2Proj
+#SBATCH -p gpuA40GB
+#SBATCH -G 1
+#SBATCH -n 4
+#SBATCH -t 0-01
+
+module purge pip install --user scikit-learn
+
+python RM2Proj.py
