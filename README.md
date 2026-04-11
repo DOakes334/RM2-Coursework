@@ -6,8 +6,8 @@ This repository contains the code, submission scripts, and output logs for the R
 
 ## Repository Contents
 * `RM2Proj.py`: The complete Python script encompassing data loading, preprocessing, PyTorch model definitions, training loops, and statistical evaluation.
-* `run_model.slurm`: The Slurm batch script used to execute the code on the CSF3 A100 GPU nodes.
-* `slurm-[YOUR_JOB_ID].out`: The raw output log from the cluster showing the training progress, final AUC scores, and the bootstrapped p-value.
+* `SLURM script`: The Slurm batch script used to execute the code on the CSF3 A100 GPU nodes.
+* `SLURM output`: The raw output log from the cluster showing the training progress, final AUC scores, and the bootstrapped p-value.
 
 ---
 
