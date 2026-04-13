@@ -18,7 +18,7 @@ The data was preprocessed using a `TfidfVectorizer` (max 5,000 features, unigram
 **Model 1: Baseline Logistic Regression**
 The baseline model is a simple logistic regression classifier implemented as a single linear layer (`nn.Linear`) followed by a Sigmoid activation. It was trained using standard Binary Cross Entropy Loss (`BCELoss`) and the AdamW optimizer. 
 
-**Model 2: Improved Deep Deep Learning Classifier (MLP)**
+**Model 2: Improved Deep Learning Classifier (MLP)**
 To improve upon the linear baseline, Model 2 implements a deep Multi-Layer Perceptron (MLP) designed to capture non-linear relationships while strictly controlling for overfitting and dataset biases. Key additions include:
 1. **Architecture:** Three hidden layers (512 $\rightarrow$ 256 $\rightarrow$ 64) allowing the network to learn complex feature representations.
 2. **Regularization:** Each layer incorporates Batch Normalization (`BatchNorm1d`), Leaky ReLUs to prevent dead neurons, and a high Dropout rate (0.3) to force the network to generalise rather than memorise the training data.
