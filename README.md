@@ -21,7 +21,7 @@ The baseline model is a simple logistic regression classifier implemented as a s
 **Model 2: Improved Deep Learning Classifier (MLP)**
 To improve upon the linear baseline, Model 2 implements a deep Multi-Layer Perceptron (MLP) designed to capture non-linear relationships while strictly controlling for overfitting and dataset biases. Key additions include:
 1. **Architecture:** Three hidden layers (512 $\rightarrow$ 256 $\rightarrow$ 64) allowing the network to learn complex feature representations.
-2. **Regularization:** Each layer incorporates Batch Normalization (`BatchNorm1d`), Leaky ReLUs to prevent dead neurons, and a high Dropout rate (0.3) to force the network to generalise rather than memorise the training data.
+2. **Regularisation:** Each layer incorporates Batch Normalisation (`BatchNorm1d`), Leaky ReLUs to prevent dead neurons, and a high Dropout rate (0.3) to force the network to generalise rather than memorise the training data.
 3. **Class Imbalance Handling:** The dataset is skewed toward positive reviews. Model 2 swaps `BCELoss` for `BCEWithLogitsLoss` using a calculated `pos_weight` (0.7420). This penalises the model equally for minority and majority class errors.
 4. **Dynamic Training:** The model uses a learning rate scheduler (`ReduceLROnPlateau`) and Early Stopping (patience=25) based on a 10% validation holdout set to halt training exactly when the model stops generalising.
 
